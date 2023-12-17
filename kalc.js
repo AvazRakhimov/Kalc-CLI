@@ -4,7 +4,7 @@ const readline = require('readline');
 
 //Welcome
 console.log("*************************************************")
-console.log("************  Welcome to Kalculate! *************")
+console.log("************* Welcome to Kalculate! *************")
 
 // Code itself:
 
