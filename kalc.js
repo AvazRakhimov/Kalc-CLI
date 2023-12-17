@@ -1,6 +1,6 @@
 
 // Modules (NodeJS):
-const readline = require('readline'); // This one is for prompt
+const readline = require('readline');
 
 //Welcome
 console.log("*************************************************")
@@ -8,7 +8,7 @@ console.log("************  Welcome to Kalculate! *************")
 
 // Code itself:
 
-//this one is for "Enter fist name"
+//this one is for enter numbers
 const q = readline.createInterface({
     input: process.stdin,
     output: process.stdout
