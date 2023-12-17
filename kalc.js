@@ -8,14 +8,14 @@ console.log("************  Welcome to Kalculate! *************")
 
 // Code itself:
 
-//this one is for enter numbers
+// This is for entering numbers
 const q = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
 
-/* This will not work if write like (q1, q2, q3)!
 
+/* This will not work if write like (q1, q2, q3)!
 const q1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
