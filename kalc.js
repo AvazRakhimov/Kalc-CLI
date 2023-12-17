@@ -36,12 +36,13 @@ const q2 = readline.createInterface({
 
 let n1, n2
 
+//
 q.question("****  Enter first number: ", (a0) => {
     if (a0 === "") {
         console.log("********  You didn't entered anything!  ********")
         q.close()
     } else {
-        //Must have
+        //Input (convert to Number)
         n1 = new Number(a0)
 
         q.question("****  Enter second number: ", (a1) => {
@@ -49,49 +50,39 @@ q.question("****  Enter first number: ", (a0) => {
                 console.log("* You didn't enter anything for the second part *")
                 q.close()
             } else {
-                //Must have
+                //Input (convert to Number)
                 n2 = new Number(a1)
 
                 q.question("Choose one of these ('+', '-', '*', '/', '%'): ", (a2) => {
-                    
-                    switch (a2){
-                    case ("+"):
-                        console.log(`****  Your answer: '${+n1 + +n2}'`);
-                        //Next 3 lines for 'Thanks'
-                        console.log("")
-                        console.log("###")
-                        console.log("Thanks for using!")
-                        break;
-                    case ("-"):
-                        console.log(`****  Your answer: '${+n1 - +n2}'`);
-                        console.log("")
-                        console.log("###")
-                        console.log("Thanks for using!")
-                        break;
-                    case ("*"):
-                        console.log(`****  Your answer: '${+n1 * +n2}'`);
-                        console.log("")
-                        console.log("###")
-                        console.log("Thanks for using!")
-                        break;
-                    case ("/"):
-                        console.log(`****  Your answer: '${+n1 / +n2}'`);
-                        console.log("")
-                        console.log("###")
-                        console.log("Thanks for using!")
-                        break;
-                    case ("%"):
-                        console.log(`****  Your answer: '${+n1 % +n2}'`)
-                        console.log("")
-                        console.log("###")
-                        console.log("Thanks for using!")
+                    // *try* for catching errors
+                    try {
+                        switch (a2){
+                        case ("+"):
+                            console.log(`****  Your answer: '${+n1 + +n2}'`);
+                            break;
+                        case ("-"):
+                            console.log(`****  Your answer: '${+n1 - +n2}'`);
+                            break;
+                        case ("*"):
+                            console.log(`****  Your answer: '${+n1 * +n2}'`);
+                            break;
+                        case ("/"):
+                            console.log(`****  Your answer: '${+n1 / +n2}'`);
+                            break;
+                        case ("%"):
+                            console.log(`****  Your answer: '${+n1 % +n2}'`);
+                        }
+                    } catch(err) {
+                        console.log(err.name)
+                        console.log(err.message)
+                    } finally {
+                        console.log("\n###\nThanks for using!")
+                        q.close()
                     }
-
-                q.close();
-            })
+            }   )
             }
         })
     }
-})
+});
 
 //
