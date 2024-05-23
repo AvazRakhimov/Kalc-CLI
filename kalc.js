@@ -1,12 +1,9 @@
-
 // Modules (NodeJS):
 const readline = require('readline');
 
-//Welcome
+// Welcome
 console.log("*************************************************")
 console.log("************* Welcome to Kalculate! *************")
-
-// Code itself:
 
 // This is for entering numbers
 const q = readline.createInterface({
@@ -36,7 +33,7 @@ const q2 = readline.createInterface({
 
 let n1, n2
 
-//
+// Main part
 q.question("****  Enter first number: ", (a0) => {
     if (a0 === "") {
         console.log("********  You didn't entered anything!  ********")
@@ -83,6 +80,4 @@ q.question("****  Enter first number: ", (a0) => {
             }
         })
     }
-});
-
-//
+})
